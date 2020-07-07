@@ -1,20 +1,21 @@
-const config = require("./config");
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
+
+const config = require('../config');
 
 const { uri } = config.mongoDB;
 
 mongoose
-  .connect(uri, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useFindAndModify: false,
-  })
-  .then(() => {
-    console.log("connected...");
-  })
-  .catch((error) => {
-    console.log(error);
-  });
+    .connect(uri, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+        useFindAndModify: false,
+    })
+    .then(() => {
+        console.log('connected...');
+    })
+    .catch((error) => {
+        console.log(error);
+    });
 
 mongoose.Promise = global.Promise;
 

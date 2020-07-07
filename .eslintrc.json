@@ -4,12 +4,20 @@
     "es2020": true,
     "node": true
   },
-  "extends": ["airbnb-base"],
+  "extends": [
+    "airbnb-base"
+  ],
   "parserOptions": {
     "ecmaVersion": 11
   },
   "rules": {
-    "semi": ["error", "always"],
-    "indent": ["error", 4]
+    "semi": [
+      "error",
+      "always"
+    ],
+    "indent": [
+      "error",
+      4
+    ]
   }
 }

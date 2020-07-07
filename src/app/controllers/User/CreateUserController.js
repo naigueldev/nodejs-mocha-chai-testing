@@ -1,11 +1,13 @@
-class CreateUserController {
-  constructor({ createUserService }) {
-    this.createUserService = createUserService;
-  }
+const createUserService = require('../../services/User/CreateUserService');
 
-  handler = async (req, res, next) => {
-    await this.createUserService.execute(req);
-  };
+class CreateUserController {
+    constructor() {
+        this.createUserService = createUserService;
+    }
+
+    async handler(req, res, next) {
+        await this.createUserService.execute(req);
+    }
 }
 
-module.exports = CreateUserController;
+module.exports = new CreateUserController();

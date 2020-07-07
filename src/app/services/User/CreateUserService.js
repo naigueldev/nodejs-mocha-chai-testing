@@ -1,14 +1,16 @@
-class CreateUserService {
-  constructor({ userRepository }) {
-    this.userRepository = userRepository;
-  }
+const userRepository = require('../../repositories/UserRepository');
 
-  async execute(data) {
-    try {
-      await userRepository.create(data);
-    } catch (error) {
-      throw new Error(error);
+class CreateUserService {
+    constructor() {
+        this.userRepository = userRepository;
     }
-  }
+
+    async execute(data) {
+        try {
+            return await this.userRepository.create(data);
+        } catch (error) {
+            throw new Error(error);
+        }
+    }
 }
-module.exports = CreateUserService;
+module.exports = new CreateUserService();

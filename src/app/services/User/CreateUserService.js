@@ -1,16 +1,19 @@
 const userRepository = require('../../repositories/UserRepository');
 
 class CreateUserService {
-    constructor() {
-        this.userRepository = userRepository;
+    constructor({ userRepositoryClass }) {
+        this.userRepositoryClass = userRepositoryClass;
     }
 
     async execute(data) {
         try {
-            return await this.userRepository.create(data);
+            const created = await this.userRepositoryClass.create(data);
+            return created;
         } catch (error) {
             throw new Error(error);
         }
     }
 }
-module.exports = new CreateUserService();
+module.exports = new CreateUserService({
+    userRepositoryClass: userRepository,
+});

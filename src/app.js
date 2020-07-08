@@ -6,8 +6,10 @@ class AppController {
     constructor(app, parser, router) {
         this.express = app;
         this.bodyParser = parser;
+        this.router = router;
+
         this.middlewares();
-        this.routes = router;
+        this.routes();
     }
 
     middlewares() {
@@ -16,7 +18,7 @@ class AppController {
     }
 
     routes() {
-        this.express.use(this.routes);
+        this.express.use(this.router);
     }
 }
 

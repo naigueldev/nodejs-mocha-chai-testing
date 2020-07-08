@@ -1,10 +1,11 @@
-const mongoose = require('mongoose');
+const mongoose = require('../database/mongodb');
 
 const { Schema } = mongoose;
 
 const UserSchema = new Schema({
     name: {
         type: String,
+        required: true,
         min: 6,
         max: 100,
     },

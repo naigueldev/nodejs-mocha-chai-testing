@@ -1,4 +1,5 @@
-import mongoose from 'mongoose';
+/* eslint-disable no-console */
+const mongoose = require('mongoose');
 
 const config = require('../config');
 

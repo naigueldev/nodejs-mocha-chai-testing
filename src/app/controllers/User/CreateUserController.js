@@ -1,14 +1,12 @@
-const createUserService = require('../../services/User/CreateUserService');
-
 class CreateUserController {
-    constructor({ createUserUseCase }) {
-        this.createUserUseCase = createUserUseCase;
+    constructor({ createUserService }) {
+        this.createUserService = createUserService;
     }
 
     async handler(req, res) {
         const { body } = req;
         try {
-            const result = await this.createUserUseCase.execute(body);
+            const result = await this.createUserService.execute(body);
             res.status(200).json(result);
         } catch (error) {
             const { message } = error;
@@ -17,6 +15,4 @@ class CreateUserController {
     }
 }
 
-module.exports = new CreateUserController({
-    createUserUseCase: createUserService,
-});
+module.exports = CreateUserController;

@@ -1,16 +1,26 @@
 # Testes com NodeJS, Mocha e Chai
 
 ## Bibliotecas utilizadas
-- Express
-- Dotenv
-- Mongoose
-- Eslint
-- Nodemon
-- Mocha
-- Chai
+
+- [Awilix](https://www.npmjs.com/package/awilix) -> (Container gerenciador de Injeção de Dependência)
+
+- [Express](https://expressjs.com/) -> (Framework que possui métodos utilitários HTTP)
+
+- [dotenv](https://www.npmjs.com/package/dotenv) -> (Modulo que carrega as variáveis de ambiente do arquivo _.env_ )
+
+- [Mongoose](https://mongoosejs.com/) -> (Modelagem de objeto mongodb para node.js)
+
+- [Eslint](https://www.npmjs.com/package/eslint) -> (Ferramenta para identificar e reportar padrões encontrados no código javascript)
+
+- [Nodemon](https://www.npmjs.com/package/nodemon) -> (Ferramenta que reinicia automaticamente a aplicação node quando é detectada alteração nos arquivos)
+
+- [Mocha](https://www.npmjs.com/package/mocha) -> (Framework para testes em Javascript para aplicações Node.js)
+
+- [Chai](https://www.npmjs.com/package/chai) -> (Biblioteca de asserções BDD / TDD para _node_ e _browser_)
 
 ## Recursos utilizados
-- Debug
+
+- Debug -> (Configuração para debugar a aplicação)
 
 ## Estrutura do projeto
 
@@ -47,7 +57,7 @@
 ### Rodando no Docker
 
 ```
-em progresso ...
+Ainda não configurado
 ```
 
 ### Rodando o projeto em ambiente de desenvolvimento

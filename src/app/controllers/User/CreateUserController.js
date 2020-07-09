@@ -5,12 +5,13 @@ class CreateUserController {
         this.createUserUseCase = createUserUseCase;
     }
 
-    async handler(req, res, next) {
+    async handler(req, res) {
+        const { body } = req;
         try {
-            const result = await this.createUserUseCase.execute(req);
+            const result = await this.createUserUseCase.execute(body);
             res.status(200).json(result);
         } catch (error) {
-            next(error);
+            res.status(404).json(error.message);
         }
     }
 }

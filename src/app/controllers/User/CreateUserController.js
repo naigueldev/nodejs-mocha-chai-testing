@@ -11,7 +11,8 @@ class CreateUserController {
             const result = await this.createUserUseCase.execute(body);
             res.status(200).json(result);
         } catch (error) {
-            res.status(404).json(error.message);
+            const { message } = error;
+            res.status(404).json({ message });
         }
     }
 }

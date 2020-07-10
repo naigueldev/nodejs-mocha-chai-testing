@@ -1,5 +1,5 @@
 const {
-    asClass, asValue, createContainer, Lifetime, listModules,
+    asClass, asValue, createContainer, Lifetime,
 } = require('awilix');
 
 const container = createContainer();

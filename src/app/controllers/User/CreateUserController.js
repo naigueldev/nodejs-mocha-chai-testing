@@ -14,5 +14,4 @@ class CreateUserController {
         }
     }
 }
-
 module.exports = CreateUserController;

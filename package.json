@@ -27,7 +27,7 @@
     "eslint-plugin-import": "^2.22.0",
     "faker": "^4.1.0",
     "istanbul": "^0.4.5",
-    "mocha": "^8.0.1",
+    "mocha": "^8.4.0",
     "nodemon": "^2.0.4",
     "request": "^2.88.2",
     "sinon": "^9.0.2"
